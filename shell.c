@@ -6,11 +6,16 @@
  *
  * Return: o
  */
-int main(int ac, char **av)
+int main(int ac, char **av, char *env[])
 {
+
 	(void)ac;
 	(void)av;
-
+	(void)env;
+	/*for (i = 0; *env[i] != '\0'; i++)
+	{
+		_printf("%s", env[i]);
+	}*/
 	simple_shell_loop();
 
 	return (0);
@@ -27,7 +32,7 @@ void simple_shell_loop(void)
 
 	while (1)
 	{
-		_puts("$ ");
+		_printf("$ ");
 		ln = read_line();
 		if (ln == NULL)
 			break;

@@ -19,7 +19,7 @@ void exeout(char **argv)
 		}
 		else
 		{
-			perror("Command not found");
+			_printf("%s: %d: command not found", argv[0], 1);
 		}
 	}
 }

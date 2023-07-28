@@ -9,6 +9,8 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <stdarg.h>
+#include <limits.h>
 
 extern char **environ;
 
@@ -25,7 +27,12 @@ char *_strcat(char *dest, char *src);
 int _strlen(char *s);
 char *_strdup(const char *str);
 int file_exists(const char *filename);
-char *create_executable_path(char *directory, char *command);
+char *create_executable_path(const char *directory, const char *command);
 char *find_exe(char *comm, char *path);
+int print_format(const char *format, va_list args);
+int _printf(const char *format, ...);
+int write_format(const char *format, va_list args, int q);
+int print_string(va_list args);
+int print_int(va_list args);
 
 #endif

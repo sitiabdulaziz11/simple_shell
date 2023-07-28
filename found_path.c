@@ -57,22 +57,23 @@ char *find_exe(char *comm, char *path)
  *
  * Return: val
  */
-char *create_executable_path(char *directory, char *command)
+char *create_executable_path(const char *directory, const char *command)
 {
-	char *exe;
+	char *exe, *p, *s;
 	size_t dir_len, comm_len;
 
-	dir_len = _strlen(directory);
-	comm_len = _strlen(command);
+	p = (char *)directory;
+	s = (char *)command;
+	dir_len = _strlen(p);comm_len = _strlen(s);
 	exe = malloc(dir_len + comm_len + 2);
 	if (!exe)
 	{
 		perror("Memory allocation error");
 		return (NULL);
 	}
-	_strcpy(exe, directory);
+	_strcpy(exe, p);
 	_strcat(exe, "/");
-	_strcat(exe, command);
+	_strcat(exe, s);
 	return (exe);
 }
 /**
