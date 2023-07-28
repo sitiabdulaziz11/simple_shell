@@ -23,3 +23,21 @@ void exeout(char **argv)
 		}
 	}
 }
+/**
+ * display_env - env.
+ * @env: argumnt
+ */
+void display_env(const char **env)
+{
+	int i, l;
+
+	while (env[l] != NULL)
+		l++;
+	env = malloc(sizeof(char *) * (l + 1));
+	env[l] = NULL;
+
+	for (i = 0; *env[i] != '\0'; i++)
+	{
+		_printf("%s", *env[i]);
+	}
+}

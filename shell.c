@@ -3,19 +3,16 @@
  * main - entry
  * @ac: argc
  * @av: argv
- *
+ * @env: env
  * Return: o
  */
-int main(int ac, char **av, char *env[])
+int main(int ac, char **av, char **env)
 {
 
 	(void)ac;
 	(void)av;
-	(void)env;
-	/*for (i = 0; *env[i] != '\0'; i++)
-	{
-		_printf("%s", env[i]);
-	}*/
+	display_env((const char **)env);
+
 	simple_shell_loop();
 
 	return (0);

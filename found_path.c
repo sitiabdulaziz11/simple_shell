@@ -64,7 +64,8 @@ char *create_executable_path(const char *directory, const char *command)
 
 	p = (char *)directory;
 	s = (char *)command;
-	dir_len = _strlen(p);comm_len = _strlen(s);
+	dir_len = _strlen(p);
+	comm_len = _strlen(s);
 	exe = malloc(dir_len + comm_len + 2);
 	if (!exe)
 	{

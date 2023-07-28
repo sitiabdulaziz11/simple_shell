@@ -34,5 +34,6 @@ int _printf(const char *format, ...);
 int write_format(const char *format, va_list args, int q);
 int print_string(va_list args);
 int print_int(va_list args);
+void display_env(const char **env);
 
 #endif
