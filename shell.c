@@ -6,12 +6,11 @@
  * @env: env
  * Return: o
  */
-int main(int ac, char **av, char **env)
+int main(int ac, char **av)
 {
 
 	(void)ac;
 	(void)av;
-	display_env((const char **)env);
 
 	simple_shell_loop();
 
